@@ -1,13 +1,24 @@
+"""
+Notepad PV finder - search all happi devices for matching items.
+"""
+
+import argparse
+import fnmatch
 import json
 import logging
-import sys
 import typing
+from typing import Dict, List, Union
 
 import happi
 import ophyd
 import pcdsdevices
+import pcdsdevices.signal
 
 logger = logging.getLogger(__name__)
+
+# Stash the description for later usage by the CLI interface.
+DESCRIPTION = __doc__.strip()
+CriteriaDict = Dict[str, Union[float, str]],
 
 
 def get_all_devices(
@@ -18,7 +29,9 @@ def get_all_devices(
 
     Parameters
     ----------
-    client : happi.Client
+    client : happi.Client, optional
+        The happi client to use.  Defaults to using one from the environment
+        configuration.
 
     Yields
     ------
@@ -32,8 +45,43 @@ def get_all_devices(
             obj = client[dev].get()
         except Exception:
             logger.exception('Failed to instantiate device: %s', obj)
+        else:
+            yield obj
 
-        yield obj
+
+def get_devices_by_criteria(
+        search_criteria: CriteriaDict,
+        *,
+        client: happi.Client = None,
+        regex: bool = True,
+        ) -> typing.Generator[ophyd.Device, None, None]:
+    """
+    Get all devices from a given happi client.
+
+    Parameters
+    ----------
+    search_criteria : dict
+        Dictionary of ``{'happi_key': 'search_value'}``.
+
+    client : happi.Client, optional
+        The happi client to use.  Defaults to using one from the environment
+        configuration.
+
+    Yields
+    ------
+    ophyd.Device
+    """
+    if client is None:
+        client = happi.Client.from_config()
+
+    search_method = client.search_regex if regex else client.search
+    for item in search_method(**search_criteria):
+        try:
+            obj = item.get()
+        except Exception:
+            logger.exception('Failed to instantiate device: %s', obj)
+        else:
+            yield obj
 
 
 def get_components_matching(
@@ -104,14 +152,31 @@ def patch_and_use_dummy_shim():
     ophyd.set_cl('dummy')
 
 
-def find_notepad_signals():
+def find_signals(
+        criteria: CriteriaDict,
+        signal_class: type = pcdsdevices.signal.NotepadLinkedSignal,
+        ) -> List[Dict[str, dict]]:
+    """
+    Find all signal metadata that match the given criteria.
+
+    Returns
+    -------
+    items : list
+        A list of all matching metadata.
+    """
+
     patch_and_use_dummy_shim()
 
     def is_notepad_signal(obj):
-        return isinstance(obj, pcdsdevices.signal.NotepadLinkedSignal)
+        return isinstance(obj, signal_class)
+
+    if not criteria:
+        devices = get_all_devices()
+    else:
+        devices = get_devices_by_criteria(criteria)
 
     found = {}
-    for dev in get_all_devices():
+    for dev in devices:
         for sig in get_components_matching(dev, predicate=is_notepad_signal):
             metadata = sig.notepad_metadata
             found[metadata['read_pv']] = metadata
@@ -120,16 +185,61 @@ def find_notepad_signals():
                 sorted(found.items(), key=lambda keyval: keyval[0]))
 
 
+def _parse_criteria(criteria_string: str) -> CriteriaDict:
+    """
+    Parse search criteria into a dictionary of ``{key: value}``.
+
+    Converts floating point values to float.
+    """
+    search_args = {}
+    for user_arg in args.search_criteria:
+        if '=' in user_arg:
+            criteria, value = user_arg.split('=', 1)
+        else:
+            criteria = 'name'
+            value = user_arg
+
+        if criteria in search_args:
+            logger.warning(
+                'Received duplicate search criteria %s=%r (was %r)',
+                criteria, value, search_args[criteria]
+            )
+            continue
+
+        try:
+            value = float(value)
+        except ValueError:
+            value = fnmatch.translate(value)
+
+        search_args[criteria] = value
+
+    return search_args
+
+
+def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
+    if parser is None:
+        parser = argparse.ArgumentParser(description=DESCRIPTION)
+
+    parser.add_argument(
+        '--filename', default='-', type=str,
+        help='File to write to (- for standard output)'
+    )
+
+    parser.add_argument(
+        'search_criteria', nargs='*',
+        help='Search criteria: field=value'
+    )
+    return parser
+
+
 if __name__ == '__main__':
-    try:
-        target_filename = sys.argv[1]
-    except Exception:
-        target_filename = '-'
+    parser = _get_argparser()
+    args = parser.parse_args()
 
-    found = find_notepad_signals()
-
-    if target_filename == '-':
+    criteria = _parse_criteria(args.search_criteria)
+    found = find_signals(criteria)
+    if args.filename == '-':
         print(json.dumps(found))
     else:
-        with open(target_filename, 'wt') as f:
+        with open(args.filename, 'wt') as f:
             json.dump(found, f)

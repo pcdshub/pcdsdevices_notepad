@@ -1,6 +1,7 @@
 import json
 
-from caproto.server import PVGroup, SubGroup, ioc_arg_parser, pvproperty, run
+from caproto.server import (PVGroup, SubGroup, pvproperty, run,
+                            template_arg_parser)
 from caproto.server.autosave import (AutosaveHelper, RotatingFileManager,
                                      autosaved)
 
@@ -115,11 +116,26 @@ def create_ioc(config_file, *, autosave_path, **ioc_options):
 
 
 if __name__ == '__main__':
-    ioc_options, run_options = ioc_arg_parser(
+    parser, split_args = template_arg_parser(
         default_prefix='PCDSDEVICES:Notepad:',
-        desc='PCDSDevices PV notepad IOC')
+        desc='PCDSDevices PV notepad IOC'
+    )
 
-    ioc = create_ioc(config_file='config.json',
-                     autosave_path='notepad_autosave.json',
+    parser.add_argument(
+        '--config', dest='config_file', type=str,
+        default='config.json',
+        help='Notepad configuration file location (default: config.json)',
+    )
+
+    parser.add_argument(
+        '--autosave', dest='autosave_path', type=str,
+        default='notepad_autosave.json',
+        help='Notepad autosave file location (default: notepad_autosave.json)',
+    )
+
+    args = parser.parse_args()
+    ioc_options, run_options = split_args(args)
+    ioc = create_ioc(config_file=args.config_file,
+                     autosave_path=args.autosave_path,
                      **ioc_options)
     run(ioc.pvdb, **run_options)
