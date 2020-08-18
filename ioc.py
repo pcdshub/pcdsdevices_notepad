@@ -126,9 +126,16 @@ if __name__ == '__main__':
         default='config.json',
         help='Notepad configuration file location (default: config.json)',
     )
+
+    parser.add_argument(
+        '--autosave', dest='autosave_path', type=str,
+        default='notepad_autosave.json',
+        help='Notepad autosave file location (default: notepad_autosave.json)',
+    )
+
     args = parser.parse_args()
     ioc_options, run_options = split_args(args)
     ioc = create_ioc(config_file=args.config_file,
-                     autosave_path='notepad_autosave.json',
+                     autosave_path=args.autosave_path,
                      **ioc_options)
     run(ioc.pvdb, **run_options)
