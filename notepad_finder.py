@@ -7,11 +7,12 @@ import fnmatch
 import json
 import logging
 import typing
-from typing import Dict, Union
+from typing import Dict, List, Union
 
 import happi
 import ophyd
 import pcdsdevices
+import pcdsdevices.signal
 
 logger = logging.getLogger(__name__)
 
@@ -28,7 +29,9 @@ def get_all_devices(
 
     Parameters
     ----------
-    client : happi.Client
+    client : happi.Client, optional
+        The happi client to use.  Defaults to using one from the environment
+        configuration.
 
     Yields
     ------
@@ -57,7 +60,12 @@ def get_devices_by_criteria(
 
     Parameters
     ----------
-    client : happi.Client
+    search_criteria : dict
+        Dictionary of ``{'happi_key': 'search_value'}``.
+
+    client : happi.Client, optional
+        The happi client to use.  Defaults to using one from the environment
+        configuration.
 
     Yields
     ------
@@ -144,18 +152,30 @@ def patch_and_use_dummy_shim():
     ophyd.set_cl('dummy')
 
 
-def find_notepad_signals(criteria: CriteriaDict):
+def find_signals(
+        criteria: CriteriaDict,
+        signal_class: type = pcdsdevices.signal.NotepadLinkedSignal,
+        ) -> List[Dict[str, dict]]:
+    """
+    Find all signal metadata that match the given criteria.
+
+    Returns
+    -------
+    items : list
+        A list of all matching metadata.
+    """
+
     patch_and_use_dummy_shim()
 
     def is_notepad_signal(obj):
-        return isinstance(obj, pcdsdevices.signal.NotepadLinkedSignal)
+        return isinstance(obj, signal_class)
 
-    found = {}
     if not criteria:
         devices = get_all_devices()
     else:
         devices = get_devices_by_criteria(criteria)
 
+    found = {}
     for dev in devices:
         for sig in get_components_matching(dev, predicate=is_notepad_signal):
             metadata = sig.notepad_metadata
@@ -217,7 +237,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     criteria = _parse_criteria(args.search_criteria)
-    found = find_notepad_signals(criteria)
+    found = find_signals(criteria)
     if args.filename == '-':
         print(json.dumps(found))
     else:
