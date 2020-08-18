@@ -3,6 +3,7 @@ Notepad PV finder - search all happi devices for matching items.
 """
 
 import argparse
+import fnmatch
 import json
 import logging
 import typing
@@ -49,6 +50,7 @@ def get_devices_by_criteria(
         search_criteria: CriteriaDict,
         *,
         client: happi.Client = None,
+        regex: bool = True,
         ) -> typing.Generator[ophyd.Device, None, None]:
     """
     Get all devices from a given happi client.
@@ -64,7 +66,8 @@ def get_devices_by_criteria(
     if client is None:
         client = happi.Client.from_config()
 
-    for item in client.search(**search_criteria):
+    search_method = client.search_regex if regex else client.search
+    for item in search_method(**search_criteria):
         try:
             obj = item.get()
         except Exception:
@@ -186,7 +189,7 @@ def _parse_criteria(criteria_string: str) -> CriteriaDict:
         try:
             value = float(value)
         except ValueError:
-            ...
+            value = fnmatch.translate(value)
 
         search_args[criteria] = value
 
@@ -201,6 +204,7 @@ def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
         '--filename', default='-', type=str,
         help='File to write to (- for standard output)'
     )
+
     parser.add_argument(
         'search_criteria', nargs='*',
         help='Search criteria: field=value'
