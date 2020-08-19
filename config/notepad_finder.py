@@ -221,7 +221,7 @@ def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
         parser = argparse.ArgumentParser(description=DESCRIPTION)
 
     parser.add_argument(
-        '--filename', default='-', type=str,
+        '--output', default='-', type=str,
         help='File to write to (- for standard output)'
     )
 
@@ -238,8 +238,8 @@ if __name__ == '__main__':
 
     criteria = _parse_criteria(args.search_criteria)
     found = find_signals(criteria)
-    if args.filename == '-':
+    if args.output == '-':
         print(json.dumps(found))
     else:
-        with open(args.filename, 'wt') as f:
+        with open(args.output, 'wt') as f:
             json.dump(found, f)
