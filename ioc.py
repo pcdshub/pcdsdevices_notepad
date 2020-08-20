@@ -63,17 +63,19 @@ class PcdsdevicesNotepad(PVGroup):
     )
 
     def _find_new_properties(self, config_items):
-        new_pvs = {}
+        props = {}
         for metadata in config_items:
             if metadata['read_pv'] not in self.pvdb:
-                new_pvs.update(pvproperty_from_metadata(**metadata))
-        return new_pvs
+                for attr, prop in pvproperty_from_metadata(**metadata).items():
+                    props[attr] = prop
+
+        return props
 
     def _add_to_pvdb(self, props):
         new_cls = type('FakeGroup', (PVGroup, ), props)
         inst = new_cls(prefix='')
         for pv in inst.pvdb:
-            self.log.warning('New PV available: %s', pv)
+            self.log.info('New PV available: %s', pv)
 
         # Combine it all...
         for attr in inst._pvs_:
@@ -89,29 +91,70 @@ class PcdsdevicesNotepad(PVGroup):
             self._update_database()
             await async_lib.library.sleep(10)
 
-    def _update_database(self):
+    def _get_properties_from_autosave(self, autosaved_data):
+        """
+        Carry forward autosaved PVs that aren't in pcdsdevices currently,
+        just in case.
+
+        Since this is a lossy operation without access to that information,
+        this makes a couple arbitrary choices: sequential attribute names and
+        picking the `ai` record .
+        """
+        props = {}
+        for idx, (pv, info) in enumerate((autosaved_data or {}).items()):
+            props[f'autosaved_carryover_{idx}'] = pvproperty(
+                value=info['value'], name=pv, record='ai'
+            )
+
+        return props
+
+    def _update_database(self, autosaved_data=None):
         with open(self.config_file) as f:
             config_items = json.load(f)
 
         props = self._find_new_properties(config_items)
+
+        # Aggregate all of the new property PV names:
+        pvs = set(prop.pvspec.name for prop in props.values())
+
+        for attr, prop in (autosaved_data or {}).items():
+            if prop.pvspec.name not in pvs:
+                self.log.warning(
+                    'PV %r from autosave not found from happi. Adding as an '
+                    '`ai` record with attribute=%s value=%s',
+                    prop.pvspec.name, attr, prop.pvspec.value
+                )
+                props[attr] = prop
+                pvs.add(prop.pvspec.name)
+
         if props:
             self._add_to_pvdb(props)
+
         return props
 
-    def __init__(self, config_file, **kwargs):
+    def __init__(self, config_file, autosaved_data, **kwargs):
         super().__init__(**kwargs)
         self._first_update = True
         self.config_file = config_file
-        self._update_database()
+        autosaved_props = self._get_properties_from_autosave(autosaved_data)
+        self._update_database(autosaved_props)
 
 
 def create_ioc(config_file, *, autosave_path, **ioc_options):
     """IOC Setup."""
 
+    try:
+        with open(autosave_path) as f:
+            autosaved_data = json.load(f)
+    except Exception:
+        autosaved_data = {}
+
     ioc = PcdsdevicesNotepad(config_file=config_file,
+                             autosaved_data=autosaved_data,
                              **ioc_options)
     ioc.autosave_helper.filename = autosave_path
     ioc.autosave_helper.file_manager = RotatingFileManager(autosave_path)
+
     return ioc
 
 
