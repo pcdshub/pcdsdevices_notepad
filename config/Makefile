@@ -18,10 +18,10 @@ notepad/%.pcdsdevices.cfg: finder/%.json macros/%.macros.json
 		--macro-file=macros/$$(basename -s .pcdsdevices.cfg $@).macros.json \
 		$<
 
-caproto/%.notepad.archive: %.json
+caproto/%.notepad.archive: finder/%.json
 	python create_archive_file.py --output $@ $<
 
-caproto/%_pcdsdevices_notepad.epicsArch.txt: %.json
+caproto/%_pcdsdevices_notepad.epicsArch.txt: finder/%.json
 	python create_recorder_file.py --output $@ $<
 
 macros/%.macros.json:
