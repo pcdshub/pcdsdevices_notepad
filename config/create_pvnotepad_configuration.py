@@ -19,6 +19,28 @@ def load_json(config_file: str) -> List[Dict[str, dict]]:
         return json.load(f)
 
 
+def _truncate_middle(string, max_length):
+    '''
+    Truncate a string to a maximum length, replacing the skipped middle section
+    with an ellipsis.
+
+    Parameters
+    ----------
+    string : str
+        The string to optionally truncate
+    max_length : int
+        The maximum length
+    '''
+    # Based on https://www.xormedia.com/string-truncate-middle-with-ellipsis/
+    if len(string) <= max_length:
+        return string
+
+    # half of the size, minus the 3 dots
+    n2 = max_length // 2 - 3
+    n1 = max_length - n2 - 3
+    return '...'.join((string[:n1], string[-n2:]))
+
+
 def create_configuration(
         template_filename: str,
         config: List[Dict[str, dict]],
@@ -33,6 +55,7 @@ def create_configuration(
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    jinja_env.filters['truncate_middle'] = _truncate_middle
     template = jinja_env.get_template(template_filename.name)
     return template.render(records=config, **macros)
 
