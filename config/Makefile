@@ -9,7 +9,7 @@ all: $(finder_results) $(archive_files) $(epicsarch_files) $(notepad_config_file
 
 finder/%.json:
 	beamline=$(notdir $(basename $@)); \
-		python notepad_finder.py --output $@ beamline=$${beamline}
+		python notepad_finder.py --output $@ beamline=$${beamline} --update
 
 notepad/%.pcdsdevices.cfg: finder/%.json macros/%.macros.json
 	python create_pvnotepad_configuration.py \
