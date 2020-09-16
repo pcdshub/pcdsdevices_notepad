@@ -1,21 +1,21 @@
 beamlines            := cxi xcs xpp mec mfx hxd icl kfe lfe mec mfx pbt tmo
 finder_results       := $(addprefix finder/,${beamlines:=.json})
 macro_files          := $(addprefix macros/,${beamlines:=.macros.json})
-notepad_config_files := $(addprefix notepad/,$(beamlines:=.pcdsdevices.cfg))
+notepad_config_files := $(addprefix notepad/ioc-,$(beamlines:=-pcdsdevices.cfg))
 archive_files        := $(addprefix caproto/,$(beamlines:=.notepad.archive))
 epicsarch_files      := $(addprefix caproto/,$(beamlines:=_pcdsdevices_notepad.epicsArch.txt))
 
 all: $(finder_results) $(archive_files) $(epicsarch_files) $(notepad_config_files) $(macro_files)
 
 finder/%.json:
-	beamline=$(notdir $(basename $@)); \
+	beamline=$*; \
 		python notepad_finder.py --output $@ beamline=$${beamline} --update
 
-notepad/%.pcdsdevices.cfg: finder/%.json macros/%.macros.json
+notepad/ioc-%-pcdsdevices.cfg: finder/%.json macros/%.macros.json
 	python create_pvnotepad_configuration.py \
 		--output $@ \
 		--template=pvnotepad_template.cfg \
-		--macro-file=macros/$$(basename -s .pcdsdevices.cfg $@).macros.json \
+		--macro-file=macros/$*.macros.json \
 		$<
 
 caproto/%.notepad.archive: finder/%.json
@@ -25,7 +25,7 @@ caproto/%_pcdsdevices_notepad.epicsArch.txt: finder/%.json
 	python create_recorder_file.py --output $@ $<
 
 macros/%.macros.json:
-	beamline=$$(basename -s .macros.json $(notdir $@)); \
+	beamline=$*; \
 	if [ ! -f "$@" ]; then \
 		echo "Building default macros for beamline: $${beamline}"; \
 		echo "{\"engineer_name\":\"engineer\",\"engineer_username\":\"engineer\",\"location\":\"SLAC:LCLS:$${beamline}\",\"iocname\":\"ioc-$${beamline}-pcdsdevices\",\"hutch\":\"$${beamline}\"}" > $@; \
