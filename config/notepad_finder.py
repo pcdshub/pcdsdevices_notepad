@@ -21,6 +21,11 @@ DESCRIPTION = __doc__.strip()
 CriteriaDict = Dict[str, Union[float, str]],
 
 
+def load_config(config_file: str) -> List[Dict[str, dict]]:
+    with open(config_file) as f:
+        return json.load(f)
+
+
 def get_all_devices(
         client: happi.Client = None
         ) -> typing.Generator[ophyd.Device, None, None]:
@@ -226,6 +231,14 @@ def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
     )
 
     parser.add_argument(
+        '--update', action='store_true',
+        help=(
+            'If `--output` is specified, load and update it instead of '
+            'overwriting'
+        )
+    )
+
+    parser.add_argument(
         'search_criteria', nargs='*',
         help='Search criteria: field=value'
     )
@@ -236,10 +249,31 @@ if __name__ == '__main__':
     parser = _get_argparser()
     args = parser.parse_args()
 
+    if args.update:
+        try:
+            config = load_config(args.output)
+        except FileNotFoundError:
+            logger.warning('--update specified but %s does not exist',
+                           args.output)
+            config = []
+    else:
+        config = []
+
+    config_by_pvname = {item['read_pv']: item for item in config}
+
     criteria = _parse_criteria(args.search_criteria)
-    found = find_signals(criteria)
+    for item in find_signals(criteria):
+        read_pv = item['read_pv']
+        if read_pv in config_by_pvname:
+            # Update the existing item
+            config_by_pvname.update(**item)
+        else:
+            # Add a new item
+            config_by_pvname[read_pv] = item
+            config.append(item)
+
     if args.output == '-':
-        print(json.dumps(found))
+        print(json.dumps(config))
     else:
         with open(args.output, 'wt') as f:
-            json.dump(found, f)
+            json.dump(config, f)
