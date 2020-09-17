@@ -11,7 +11,7 @@ finder/%.json:
 	beamline=$*; \
 		python notepad_finder.py --output $@ beamline=$${beamline} --update
 
-notepad/ioc-%-pcdsdevices.cfg: finder/%.json macros/%.macros.json
+notepad/ioc-%-pcdsdevices.cfg: finder/%.json macros/%.macros.json pvnotepad_template.cfg
 	python create_pvnotepad_configuration.py \
 		--output $@ \
 		--template=pvnotepad_template.cfg \
