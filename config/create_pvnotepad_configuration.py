@@ -14,6 +14,24 @@ import jinja2
 DESCRIPTION = __doc__.strip()
 
 
+SUPPORTED_RECORD_MAP = {
+    # These are the only records currently available (R2.0.1):
+    'ao': 'ao',
+    'bo': 'bo',
+    'longout': 'longout',
+    'mbbo': 'mbbo',
+    'stringin': 'stringin',
+    'waveform': 'waveform',
+
+    # Map any input records onto their output equivalent:
+    'ai': 'ao',
+    'bi': 'bo',
+    'longin': 'longout',
+    'mbbi': 'mbbo',
+    'stringout': 'stringin',
+}
+
+
 def load_json(config_file: str) -> List[Dict[str, dict]]:
     with open(config_file) as f:
         return json.load(f)
@@ -57,7 +75,8 @@ def create_configuration(
     )
     jinja_env.filters['truncate_middle'] = _truncate_middle
     template = jinja_env.get_template(template_filename.name)
-    return template.render(records=config, **macros)
+    return template.render(records=config, record_map=SUPPORTED_RECORD_MAP,
+                           **macros)
 
 
 def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
