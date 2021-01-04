@@ -1,1 +1,7 @@
-{"engineer_name":"engineer","engineer_username":"engineer","location":"SLAC:LCLS:cxi","iocname":"ioc-cxi-pcdsdevices","hutch":"cxi"}
+{
+   "iocname" : "ioc-cxi-pcdsdevices",
+   "engineer_name" : "engineer",
+   "hutch" : "cxi",
+   "location" : "SLAC:LCLS:cxi",
+   "engineer_username" : "engineer"
+}

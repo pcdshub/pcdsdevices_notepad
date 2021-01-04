@@ -1,1 +1,7 @@
-{"engineer_name":"engineer","engineer_username":"engineer","location":"SLAC:LCLS:tmo","iocname":"ioc-tmo-pcdsdevices","hutch":"tmo"}
+{
+   "location" : "SLAC:LCLS:tmo",
+   "hutch" : "tmo",
+   "iocname" : "ioc-tmo-pcdsdevices",
+   "engineer_name" : "engineer",
+   "engineer_username" : "engineer"
+}

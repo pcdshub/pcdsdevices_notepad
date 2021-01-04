@@ -1,1 +1,7 @@
-{"engineer_name":"engineer","engineer_username":"engineer","location":"SLAC:LCLS:kfe","iocname":"ioc-kfe-pcdsdevices","hutch":"kfe"}
+{
+   "engineer_name" : "engineer",
+   "iocname" : "ioc-kfe-pcdsdevices",
+   "location" : "SLAC:LCLS:kfe",
+   "hutch" : "kfe",
+   "engineer_username" : "engineer"
+}
