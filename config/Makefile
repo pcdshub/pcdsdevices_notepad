@@ -1,4 +1,4 @@
-beamlines            := cxi xcs xpp mec mfx hxd icl kfe lfe mfx pbt tmo
+beamlines            := cxi xcs xpp mec mfx hxd icl kfe lfe tmo
 finder_results       := $(addprefix finder/,${beamlines:=.json})
 macro_files          := $(addprefix macros/,${beamlines:=.macros.json})
 notepad_config_files := $(addprefix notepad/ioc-,$(beamlines:=-pcdsdevices.cfg))
