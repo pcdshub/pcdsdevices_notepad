@@ -38,8 +38,11 @@ pvs:
 			grep -v -e null; \
 	done
 
+iocs:
+	make -C iocs
+
 clean:
 	rm -f finder/*.json
 
 
-.PHONY: all pvs clean
+.PHONY: all pvs clean iocs
