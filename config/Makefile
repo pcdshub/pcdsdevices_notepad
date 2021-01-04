@@ -40,7 +40,7 @@ macros/%.macros.json:
 	beamline=$*; \
 	if [ ! -f "$@" ]; then \
 		echo "Building default macros for beamline: $${beamline}"; \
-		echo "{\"engineer_name\":\"engineer\",\"engineer_username\":\"engineer\",\"location\":\"SLAC:LCLS:$${beamline}\",\"iocname\":\"ioc-$${beamline}-pcdsdevices\",\"hutch\":\"$${beamline}\"}" > $@; \
+		echo "{\"engineer_name\":\"engineer\",\"engineer_username\":\"engineer\",\"location\":\"SLAC:LCLS:$${beamline}\",\"iocname\":\"ioc-$${beamline}-pcdsdevices\",\"hutch\":\"$${beamline}\"}" | json_pp > $@; \
 	fi
 
 pvs:
