@@ -1,7 +1,39 @@
 PCDSDevices Notepad IOC with happi-based autodiscovery mechanism
 ================================================================
 
-Example:
+This repository contains a
+[pvNotepad](https://github.com/pcdshub/pvNotepad)-compatible configuration file
+generation tool as well as a prototype replacement caproto-based IOC.
+
+pvNotepad
+---------
+
+To first make the configuration files in ``config/notepad``:
+
+```bash
+$ cd config
+
+# Force the discovery mechanism to search happi again:
+$ make clean
+
+# Force the discovery mechanism to search again:
+$ make
+```
+
+Then, perform most of the IOC updating by way of:
+
+```bash
+$ cd iocs
+$ make
+```
+
+For more information on this step, see [config/iocs/README.md].
+
+caproto
+-------
+
+The prototype caproto IOC (which is currently unused) uses configuration files
+similarly to pvNotepad.  Generate those files first, then run the IOC::
 
 ```bash
 $ make -C config
