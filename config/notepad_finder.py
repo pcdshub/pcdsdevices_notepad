@@ -273,7 +273,7 @@ if __name__ == '__main__':
             config.append(item)
 
     if args.output == '-':
-        print(json.dumps(config))
+        print(json.dumps(config, sort_keys=True, indent=4))
     else:
         with open(args.output, 'wt') as f:
-            json.dump(config, f)
+            json.dump(config, f, sort_keys=True, indent=4)

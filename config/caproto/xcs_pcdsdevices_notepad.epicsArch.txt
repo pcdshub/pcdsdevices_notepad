@@ -1,0 +1,36 @@
+* xcs_txt.user_offset
+XCS:LAS:MMN:01:OphydOffset
+* xcs_txt.notepad_readback
+XCS:LAS:MMN:01:delay:OphydReadback
+* xcs_txt.notepad_setpoint
+XCS:LAS:MMN:01:delay:OphydSetpoint
+* xcs_lxt_fast.user_offset
+XCS:LAS:MMN:03:OphydOffset
+* xcs_lxt_fast.notepad_readback
+XCS:LAS:MMN:03:delay:OphydReadback
+* xcs_lxt_fast.notepad_setpoint
+XCS:LAS:MMN:03:delay:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MMS:24:pseudo:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MMS:24:pseudo:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MMS:26:pseudo:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MMS:26:pseudo:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MPZ:01:energy:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MPZ:01:energy:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MPZ:01:energy_with_vernier:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MPZ:01:energy_with_vernier:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MPZ:01:theta:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MPZ:01:theta:OphydSetpoint
+* xcs_ccm.notepad_readback
+XCS:MON:MPZ:01:wavelength:OphydReadback
+* xcs_ccm.notepad_setpoint
+XCS:MON:MPZ:01:wavelength:OphydSetpoint

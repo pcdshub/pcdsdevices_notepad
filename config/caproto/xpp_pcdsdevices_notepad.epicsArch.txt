@@ -1,0 +1,36 @@
+* xpp_lxt_fast.user_offset
+XPP:LAS:MMN:04:OphydOffset
+* xpp_lxt_fast.notepad_readback
+XPP:LAS:MMN:04:delay:OphydReadback
+* xpp_lxt_fast.notepad_setpoint
+XPP:LAS:MMN:04:delay:OphydSetpoint
+* xpp_txt.user_offset
+XPP:LAS:MMN:16:OphydOffset
+* xpp_txt.notepad_readback
+XPP:LAS:MMN:16:delay:OphydReadback
+* xpp_txt.notepad_setpoint
+XPP:LAS:MMN:16:delay:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MMS:22:pseudo:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MMS:22:pseudo:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MMS:24:pseudo:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MMS:24:pseudo:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MPZ:07A:energy:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MPZ:07A:energy:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MPZ:07A:energy_with_vernier:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MPZ:07A:energy_with_vernier:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MPZ:07A:theta:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MPZ:07A:theta:OphydSetpoint
+* xpp_ccm.notepad_readback
+XPP:MON:MPZ:07A:wavelength:OphydReadback
+* xpp_ccm.notepad_setpoint
+XPP:MON:MPZ:07A:wavelength:OphydSetpoint

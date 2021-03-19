@@ -115,8 +115,6 @@ if __name__ == '__main__':
     parser = _get_argparser()
     args = parser.parse_args()
 
-    print(args)
-
     config = load_json(args.config_file)
     macros = load_json(args.macro_file) if args.macro_file else {}
     for macro in args.macro or []:

@@ -1,0 +1,7 @@
+{
+   "location" : "SLAC:LCLS:rix",
+   "engineer_name" : "engineer",
+   "engineer_username" : "engineer",
+   "iocname" : "ioc-rix-pcdsdevices",
+   "hutch" : "rix"
+}

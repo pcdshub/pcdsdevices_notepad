@@ -1,0 +1,7 @@
+{
+   "hutch" : "lfe",
+   "location" : "SLAC:LCLS:lfe",
+   "iocname" : "ioc-lfe-pcdsdevices",
+   "engineer_username" : "engineer",
+   "engineer_name" : "engineer"
+}
