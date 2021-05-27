@@ -245,6 +245,28 @@ def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
     return parser
 
 
+def find_notepad_signals(*devices, output=None):
+    patch_and_use_dummy_shim()
+
+    def is_notepad_signal(obj):
+        return isinstance(obj, pcdsdevices.signal.NotepadLinkedSignal) 
+
+    found = {}
+    for dev in devices:
+        for sig in get_components_matching(dev, predicate=is_notepad_signal):
+            metadata = sig.notepad_metadata
+            found[metadata['read_pv']] = metadata
+
+    results = list(metadata for key, metadata in
+                sorted(found.items(), key=lambda keyval: keyval[0]))
+
+    if output is None:
+        return results
+    else:
+        with open(output, 'wt') as f:
+            json.dump(results, f, sort_keys=True, indent=4)
+
+
 if __name__ == '__main__':
     parser = _get_argparser()
     args = parser.parse_args()
