@@ -4,7 +4,7 @@
         "dotted_name": "xpp_lxt_fast.user_offset",
         "name": "xpp_lxt_fast_user_offset",
         "owner_type": "DelayNewport",
-        "read_pv": "XPP:LAS:MMN:04:OphydOffset",
+        "read_pv": "XPP:LAS:MMN:02:OphydOffset",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -16,7 +16,7 @@
         "dotted_name": "xpp_lxt_fast.notepad_readback",
         "name": "xpp_lxt_fast_delay_notepad_readback",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:LAS:MMN:04:delay:OphydReadback",
+        "read_pv": "XPP:LAS:MMN:02:delay:OphydReadback",
         "record": "ai",
         "signal_kwargs": {
             "kind": 1
@@ -28,7 +28,7 @@
         "dotted_name": "xpp_lxt_fast.notepad_setpoint",
         "name": "xpp_lxt_fast_delay_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:LAS:MMN:04:delay:OphydSetpoint",
+        "read_pv": "XPP:LAS:MMN:02:delay:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -74,9 +74,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_x_pseudo_notepad_readback",
+        "name": "xpp_ccm_x_sync_notepad_readback",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MMS:22:pseudo:OphydReadback",
+        "read_pv": "XPP:MON:MMS:22:sync:OphydReadback",
         "record": "ai",
         "signal_kwargs": {
             "kind": 1
@@ -86,9 +86,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_x_pseudo_notepad_setpoint",
+        "name": "xpp_ccm_x_sync_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MMS:22:pseudo:OphydSetpoint",
+        "read_pv": "XPP:MON:MMS:22:sync:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -98,9 +98,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_y_pseudo_notepad_readback",
+        "name": "xpp_ccm_y_sync_notepad_readback",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MMS:24:pseudo:OphydReadback",
+        "read_pv": "XPP:MON:MMS:24:sync:OphydReadback",
         "record": "ai",
         "signal_kwargs": {
             "kind": 1
@@ -110,9 +110,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_y_pseudo_notepad_setpoint",
+        "name": "xpp_ccm_y_sync_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MMS:24:pseudo:OphydSetpoint",
+        "read_pv": "XPP:MON:MMS:24:sync:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -122,7 +122,7 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_calc_energy_notepad_readback",
+        "name": "xpp_ccm_energy_with_vernier_energy_notepad_readback",
         "owner_type": "PseudoSingleInterface",
         "read_pv": "XPP:MON:MPZ:07A:energy:OphydReadback",
         "record": "ai",
@@ -134,81 +134,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_calc_energy_notepad_setpoint",
+        "name": "xpp_ccm_energy_with_vernier_energy_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
         "read_pv": "XPP:MON:MPZ:07A:energy:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_calc_energy_with_vernier_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:energy_with_vernier:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_calc_energy_with_vernier_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:energy_with_vernier:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_calc_theta_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:theta:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_calc_theta_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:theta:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_readback",
-        "name": "xpp_ccm_calc_wavelength_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:wavelength:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xpp_ccm.notepad_setpoint",
-        "name": "xpp_ccm_calc_wavelength_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XPP:MON:MPZ:07A:wavelength:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1

@@ -74,9 +74,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_x_pseudo_notepad_readback",
+        "name": "xcs_ccm_x_sync_notepad_readback",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MMS:24:pseudo:OphydReadback",
+        "read_pv": "XCS:MON:MMS:24:sync:OphydReadback",
         "record": "ai",
         "signal_kwargs": {
             "kind": 1
@@ -86,9 +86,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_x_pseudo_notepad_setpoint",
+        "name": "xcs_ccm_x_sync_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MMS:24:pseudo:OphydSetpoint",
+        "read_pv": "XCS:MON:MMS:24:sync:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -98,9 +98,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_y_pseudo_notepad_readback",
+        "name": "xcs_ccm_y_sync_notepad_readback",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MMS:26:pseudo:OphydReadback",
+        "read_pv": "XCS:MON:MMS:26:sync:OphydReadback",
         "record": "ai",
         "signal_kwargs": {
             "kind": 1
@@ -110,9 +110,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_y_pseudo_notepad_setpoint",
+        "name": "xcs_ccm_y_sync_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MMS:26:pseudo:OphydSetpoint",
+        "read_pv": "XCS:MON:MMS:26:sync:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
@@ -122,7 +122,7 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_calc_energy_notepad_readback",
+        "name": "xcs_ccm_energy_with_vernier_energy_notepad_readback",
         "owner_type": "PseudoSingleInterface",
         "read_pv": "XCS:MON:MPZ:01:energy:OphydReadback",
         "record": "ai",
@@ -134,81 +134,9 @@
     {
         "default_value": 0.0,
         "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_calc_energy_notepad_setpoint",
+        "name": "xcs_ccm_energy_with_vernier_energy_notepad_setpoint",
         "owner_type": "PseudoSingleInterface",
         "read_pv": "XCS:MON:MPZ:01:energy:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_calc_energy_with_vernier_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:energy_with_vernier:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_calc_energy_with_vernier_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:energy_with_vernier:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_calc_theta_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:theta:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_calc_theta_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:theta:OphydSetpoint",
-        "record": "ao",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_readback",
-        "name": "xcs_ccm_calc_wavelength_notepad_readback",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:wavelength:OphydReadback",
-        "record": "ai",
-        "signal_kwargs": {
-            "kind": 1
-        },
-        "write_pv": null
-    },
-    {
-        "default_value": 0.0,
-        "dotted_name": "xcs_ccm.notepad_setpoint",
-        "name": "xcs_ccm_calc_wavelength_notepad_setpoint",
-        "owner_type": "PseudoSingleInterface",
-        "read_pv": "XCS:MON:MPZ:01:wavelength:OphydSetpoint",
         "record": "ao",
         "signal_kwargs": {
             "kind": 1
