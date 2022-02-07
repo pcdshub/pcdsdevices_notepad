@@ -1,1 +1,1298 @@
-[]
+[
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_chi1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_chi1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_chi1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_chi1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_chi2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_chi2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_chi2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_chi2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:CHI2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_h1nC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1N:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_h1nC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1N:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_h1nSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1N:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_h1nSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1N:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_h1pC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1P:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_h1pC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1P:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_h1pSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1P:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_h1pSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H1P:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_h2nC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H2N:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_h2nC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H2N:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_h2nSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H2N:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_h2nSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:H2N:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_th1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_th1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_si_th1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_si_th1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_th2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_th2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_si_th2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_si_th2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:TH2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_x1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_x1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_x1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_x1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_x2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_x2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_x2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_x2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:X2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_y1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_y1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower1_y1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower1_y1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_y2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_y2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_tower2_y2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_tower2_y2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Y2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_z1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_z1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_si_z1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_si_z1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_z2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_z2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_si_z2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_si_z2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:Z2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_readback",
+        "name": "xcs_lodcm_energy_c_energy_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:energy:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xcs_lodcm.notepad_setpoint",
+        "name": "xcs_lodcm_energy_c_energy_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XCS:LODCM:energy:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_chi1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_chi1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_chi1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_chi1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_chi2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_chi2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_chi2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_chi2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:CHI2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_h1nC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1N:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_h1nC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1N:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_h1nSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1N:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_h1nSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1N:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_h1pC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1P:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_h1pC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1P:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_h1pSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1P:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_h1pSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H1P:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_h2nC_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H2N:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_h2nC_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H2N:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_h2nSi_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H2N:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_h2nSi_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:H2N:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_th1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_th1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_si_th1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_si_th1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_th2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_th2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_si_th2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_si_th2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:TH2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_x1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_x1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_x1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_x1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_x2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_x2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_x2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_x2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:X2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_y1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_y1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower1_y1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower1_y1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_y2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_y2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_tower2_y2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_tower2_y2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Y2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_z1C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z1:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_z1C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z1:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_si_z1Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z1:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_si_z1Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z1:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_z2C_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z2:OFF_C:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_z2C_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z2:OFF_C:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_si_z2Si_pseudo_motor_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z2:OFF_Si:pseudo_motor:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_si_z2Si_pseudo_motor_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:Z2:OFF_Si:pseudo_motor:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_readback",
+        "name": "xpp_lodcm_energy_c_energy_notepad_readback",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:energy:OphydReadback",
+        "record": "ai",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    },
+    {
+        "default_value": 0.0,
+        "dotted_name": "xpp_lodcm.notepad_setpoint",
+        "name": "xpp_lodcm_energy_c_energy_notepad_setpoint",
+        "owner_type": "PseudoSingleInterface",
+        "read_pv": "XPP:LODCM:energy:OphydSetpoint",
+        "record": "ao",
+        "signal_kwargs": {
+            "kind": 1
+        },
+        "write_pv": null
+    }
+]

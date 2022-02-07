@@ -14,8 +14,6 @@ beamlines :=  \
 finder_results       := $(addprefix finder/,${beamlines:=.json})
 macro_files          := $(addprefix macros/,${beamlines:=.macros.json})
 notepad_config_files := $(addprefix notepad/ioc-,$(beamlines:=-pcdsdevices.cfg))
-archive_files        := $(addprefix caproto/,$(beamlines:=.notepad.archive))
-epicsarch_files      := $(addprefix caproto/,$(beamlines:=_pcdsdevices_notepad.epicsArch.txt))
 
 all: $(finder_results) $(archive_files) $(epicsarch_files) $(notepad_config_files) $(macro_files)
 
@@ -29,12 +27,6 @@ notepad/ioc-%-pcdsdevices.cfg: finder/%.json macros/%.macros.json pvnotepad_temp
 		--template=pvnotepad_template.cfg \
 		--macro-file=macros/$*.macros.json \
 		$<
-
-caproto/%.notepad.archive: finder/%.json
-	python create_archive_file.py --output $@ $<
-
-caproto/%_pcdsdevices_notepad.epicsArch.txt: finder/%.json
-	python create_recorder_file.py --output $@ $<
 
 macros/%.macros.json:
 	beamline=$*; \
