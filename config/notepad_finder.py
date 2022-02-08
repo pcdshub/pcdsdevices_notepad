@@ -7,7 +7,7 @@ import fnmatch
 import json
 import logging
 import typing
-from typing import Dict, List, Union
+from typing import Dict, List, Optional, Union
 
 import happi
 import ophyd
@@ -243,6 +243,54 @@ def _get_argparser(parser: typing.Optional[argparse.ArgumentParser] = None):
         help='Search criteria: field=value'
     )
     return parser
+
+
+def find_signals_from_devices(
+    *devices: ophyd.Device, output: Optional[str] = None
+) -> List[Dict]:
+    """
+    From the provided devices, find any NotepadLinkedSignal instances.
+
+    May be used in a shared hutch-python environment as it does not change the
+    underlying ophyd control layer.
+
+    Parameters
+    ----------
+    *devices : ophyd.Device
+        Devices to check.
+
+    output : str, optional
+        Filename to write results to.  Defaults to standard output if not
+        provided.
+
+    Returns
+    -------
+    results : list of dict
+        List of metadata dictionaries.
+    """
+
+    def is_notepad_signal(obj):
+        return isinstance(obj, pcdsdevices.signal.NotepadLinkedSignal)
+
+    found = {}
+    for dev in devices:
+        if not isinstance(dev, ophyd.Device):
+            continue
+
+        for sig in get_components_matching(dev, predicate=is_notepad_signal):
+            metadata = sig.notepad_metadata
+            found[metadata['read_pv']] = metadata
+
+    results = list(
+        metadata
+        for _, metadata in sorted(found.items(), key=lambda keyval: keyval[0])
+    )
+
+    if output is not None:
+        with open(output, 'wt') as f:
+            json.dump(results, f, sort_keys=True, indent=4)
+
+    return results
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 {
-   "location" : "SLAC:LCLS:tmo",
-   "hutch" : "tmo",
+   "location" : "SLAC:LCLS:TMO",
+   "hutch" : "TMO",
    "iocname" : "ioc-tmo-pcdsdevices",
-   "engineer_name" : "engineer",
-   "engineer_username" : "engineer"
+   "engineer_name" : "Tyler Pennebaker",
+   "engineer_username" : "pennebak"
 }
